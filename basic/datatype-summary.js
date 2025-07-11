@@ -35,3 +35,27 @@ const myFunction = function(){
 console.log(typeof anotherId); // to find data type
 
 // https://262.ecma-international.org/5.1/#sec-11.4.3
+
+
+
+//stack (primitive) -> isme copy create hooga usme change hoga 
+// heap (non - primitive) -> isme refrence value milega usme change hoga means original chaneg hoga
+
+let myName = "rishi"
+let herName = myName
+
+herName = "rishabh"
+
+console.log(myName) //-> rishi
+console.log(herName)  // -> rishabh
+
+let user = {
+    email : "abcdotcom",
+}
+
+let usertwo = user
+
+usertwo.email = "xyzdot.com"
+
+console.log(user) //-> xyzdotcom
+console.log(usertwo)  // -> xyzdotcom
