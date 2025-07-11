@@ -1,6 +1,6 @@
-//  Primitive -> call by value it take value as copy 
+//  Primitive -> call by value, it take value as copy 
 
-//  7 types : String, Number, Boolearn, null, undefined, Symbol, BigInt
+//  7 types : String, Number, Boolearn, null, undefined, Symbol-> unique, BigInt
 
 const score = 100 //number
 const scoreValue = 100.3
@@ -14,16 +14,16 @@ const anotherId = Symbol('123')
 
 console.log(id === anotherId); // false as output
 
-// const bigNumber = 3456543576654356754n
+// const bigNumber = 3456543576654356754n  -> bigINT
 
+// JavaScript is a dynamically typed language.
 
-
-// Reference (Non primitive) -> allocate refrence directly
+// Reference type (Non primitive) -> allocate reference directly
 
 // Array, Objects, Functions
 
 const heros = ["shaktiman", "naagraj", "doga"];
-let myObj = {             // object
+let myObj = {             // object curly bracket 
     name: "hitesh",
     age: 22,
 }
