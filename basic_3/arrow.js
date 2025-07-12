@@ -61,7 +61,7 @@ const chai =  () => {       --- arrow fxn
 
 if they are in curly bracket {}  toh return likhna hoga  
 
-const addTwo = (num1, num2) => ({username: "hitesh"})    ---- object ko return krne ke lia paraenthseis needed hain
+const addTwo = (num1, num2) => ({username: "hitesh"})    ---- object ko return krne ke lia paraenthseis needed 
 
 
 console.log(addTwo(3, 4))
