@@ -13,6 +13,6 @@
 //()()     --- 1st one is for wrap function and in second one hum log use kreneg () excute ke lia 
 // ; to end iife or stop iife
 
-( (name) => {         // arrow fxn
+( (name) => {         // arrow fxn     // unnammed iife
     console.log(`DB CONNECTED TWO ${name}`);
 } )('hitesh')
