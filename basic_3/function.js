@@ -76,17 +76,20 @@ function calculateCartPrice(val1, val2, ...num1){
 //console.log(calculateCartPrice(200, 400, 500, 2000))   // [500,2000]  -> yeh num 1 hain and val1 and val2 are = 100,200 amd voh retrun nahi hua haim
 
 
+
+// how we pass object in function
+
 const user = {
     username: "hitesh",
     prices: 199
 }
 
 function handleObject(anyobject){
-    console.log(`Username is ${anyobject.username} and price is ${anyobject.price}`);
+    //console.log(`Username is ${anyobject.username} and price is ${anyobject.price}`);
 }
 
-// handleObject(user)
-handleObject({
+// handleObject(user)    ->  same otput pass krega
+handleObject({            // -> direct object pass krdia
     username: "sam",
     price: 399
 })
@@ -98,4 +101,17 @@ function returnSecondValue(getArray){
 }
 
 // console.log(returnSecondValue(myNewArray));
-console.log(returnSecondValue([200, 400, 500, 1000]));
+//console.log(returnSecondValue([200, 400, 500, 1000]));
+
+
+const abc = {
+    name: "rishi",
+    age: "20"
+}
+
+function getobject(anyobject){
+    console.log(`username is : ${anyobject.name}`)    // -> username is rishi
+}
+
+// getobject(abc)  
+ 
