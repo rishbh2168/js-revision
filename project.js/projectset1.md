@@ -124,3 +124,117 @@ setInterval(function(){
 }, 1000);
 
 ```
+## project 4 solution
+
+``` javascript
+
+let randomnumber = Math.round(Math.random() * 100 + 1)  // random number
+// console.log(randomnumber)
+
+const submit = document.querySelector("#subt")
+const userinput = document.querySelector("#guessField")
+const gussslot = document.querySelector(".guesses")
+const remaining = document.querySelector(".lastResult")
+const loworhigh = document.querySelector(".lowOrHi")
+const startover = document.querySelector(".resultParas")  // for new game
+
+const p = document.createElement("p") // create an paragraph
+
+let prevguess = []
+let numguess = 1
+
+let playgame = true;  // booleam to check that game is start in game always craete an boolean like this to chcek false case
+
+if(playgame){ // if it is true then we can proceed further 
+  submit.addEventListener("click", function(e){   // add event to listen submit button
+    e.preventDefault()
+    const guess = userinput.value  // guessfiled ki value aaegi
+    valiadteguess(guess)
+
+  })
+}
+
+function valiadteguess(guess){
+  // check that guess is valid or not false conditiona nd all check
+
+  if(isNaN(guess)){
+    alert(`please enter valid number`)
+  } else if(guess < 1){
+    alert(`please enter a number greater than or equal to 1`)
+  }else if(guess > 100){
+    alert(`please enter a number less than 100`)
+  }else {
+    prevguess.push(guess)
+    if(numguess === 10){  // if number of guess is 10 teh game over
+      displayguess(guess)
+      displaymessage(`game over. number is ${randomnumber}`)
+      endgame()
+    } else {
+      displayguess(guess)
+      checkguess(guess)
+    }
+  }
+}
+
+function checkguess(guess){
+  // check that guess user input is = random number or not
+
+  if(guess === randomnumber){
+    displaymessage(`WONNNNN`)
+    endgame()
+  }else if (guess < randomnumber){
+    displaymessage(`number is too high`)
+  }else if (guess > randomnumber){ 
+    displaymessage(`number is too low`)
+  }
+
+}
+
+function displayguess(guess){
+  // dispaly the guess, clean user input then update array and update the reamining guess
+
+  userinput.value = ''   // too clean the user input, guess filed ko clean krna fo rnext guess
+  gussslot.innerHTML += `${guess}`
+  numguess++
+  remaining.innerHTML = `${10 - numguess}`
+}
+
+function displaymessage(message){
+  // dispaly message according to guess that user input is too high or too low or correct
+
+  loworhigh.innerHTML = `<h2>${message}</h2>`
+}
+
+function endgame(){
+  // to end the game
+  userinput.value = ''
+  userinput.setAttribute("disabled", "")   // to diable the guess field
+  p.classList.add("button")      // to create new button
+  p.innerHTML = `<h2 id="newgame"> start new game </h2>`  // newgame button create krdenge when click on it to start new game
+  startover.appendChild(p)    //for restart game
+  playgame = false
+  newgame()
+}
+
+function newgame(){
+  // to start new game
+  const newgamebutton = document.querySelector("#newgame")
+  newgamebutton.addEventListener("click", function(e){  // new button pe event lag rahe hain
+    randomnumber = Math.round(Math.random() * 100 + 1)  // regenerate randomnumber
+    prevguess = []  // array ko empty krdo
+    numguess = 1  // guess ko restart from 1
+    gussslot.innerHTML = ''  // isko bhi empty krdo prev guess
+    remaining.innerHTML = `${10 - numguess}`   // isko bhi 10 se start krdo
+    userinput.removeAttribute("disabled")  // disable ke attribute ko remove krdo
+    startover.removeChild(p)
+    playgame = true    // game retstart krdo
+  })
+}
+
+
+
+
+
+
+
+```
