@@ -103,3 +103,24 @@ or to convert string to int we use parseInt
 */
 
 ```
+
+## project 3 solution
+
+```javascript
+
+const clock = document.querySelector("#clock")
+//console.log(clock)
+
+const time = new Date();
+//console.log(time.toLocaleTimeString())
+
+//set interval = apply when we need to ru n our script after some interval
+
+// syntax == setInterval(function(){}, 1000);  //1000 is for how many milisecond baad code run krna hain
+
+setInterval(function(){
+
+  clock.innerHTML = time.toLocaleTimeString();
+}, 1000);
+
+```
