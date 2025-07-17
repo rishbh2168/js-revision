@@ -46,3 +46,60 @@ buttons.forEach((button) => {
 //})
 
 ```
+
+## project 2 solution 
+
+```javascript
+const form = document.querySelector('form')
+//this usecase will give you empty value when we click on submit button the textbox get empty
+//Const height = parseInt(document.querySelector("#height").value)
+
+form.addEventListener("submit", function(e){  // evenet to stop value to submit in server and url
+  e.preventDefault() // to stop default fxn like submit and all
+
+  const height = parseInt(document.querySelector("#height").value) // .value to get value of id and class and parseInt for convert string into integer
+  const weight = parseInt(document.querySelector("#weight").value) // value visible when submit button call also
+  const results = document.querySelector("#results")
+
+  if(height === " " || height < 0 || isNaN(height)){
+    results.innerHTML = `Please give me valid height ${height}`
+  } else if(weight === " " || weight < 0 || isNaN(weight)){
+    results.innerHTML = `Please give me valid weight ${weight}`
+  } else {
+    const bmi = (weight / ((height * height) / 10000)).toFixed(2); // tofixed for decimal value and divide by thousand for convert it to meters
+
+    results.innerHTML = `<span>${bmi}</span>`;
+
+    if(bmi < 18.6){
+      results.innerHTML += `<br><span>Under weight</span>`
+    } else if(bmi < 24.9 && bmi >= 18.6){
+      results.innerHTML += `<br><span>Normal range</span>`
+    } else if(bmi > 24.9){
+      results.innerHTML += `<br><span>Overweight</span>`
+    }
+
+  }
+
+
+})
+
+
+
+
+
+
+
+
+
+/* in form when we click on submit button and want to see result so we need to select complete form
+
+document.queryselector('form')
+
+when we click on submit button the page is submit by two ways get and post so to stop not post the value to url or server we need to put and event name "submit"
+
+to get the value of any id and class we acn use ".value"
+or to convert string to int we use parseInt
+
+*/
+
+```
