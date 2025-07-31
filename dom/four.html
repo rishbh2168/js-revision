@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>chai aur code</title>
+</head>
+<body style="background-color: black; color: #fff;">
+    <ul class="language">
+        <li>html</li>
+    </ul>
+    
+</body>
+<script>
+    function addlanguage(langname){       // function to add element
+        const li = document.createElement('li')
+        li.innerText = `${langname}`
+        document.querySelector(".language").appendChild(li)
+    }
+    addlanguage("ruby")
+    addlanguage("python")
+function addoptimizedlanguage(langname){
+        const li = document.createElement('li')
+        li.appendChild(document.createTextNode(`${langname}`))  // optimized step
+        document.querySelector(".language").appendChild(li)
+    }
+    addoptimizedlanguage("java")
+
+
+    // edit value 
+
+    const secondlang = document.querySelector("li:nth-child(2)")
+    // secondlang.innerText = "c++"    //1st way
+    // secondlang.style.backgroundColor = "green"
+
+    const newli = document.createElement("li")
+    newli.textContent = "c++"   //2nd way
+    secondlang.replaceWith(newli)   // use replace with method
+
+
+    // remove
+
+    const secondlastlang = document.querySelector("li:nth-child(3)")
+    secondlastlang.remove()   // use remove method
+
+
+</script>
+</html>
+
+
+<!--  how to edit and remove element in dom
+
+
+function addlanguage(langname){   // function to add element
+        const li = document.createElement('li')
+        li.innerText = `${langname}`
+        document.querySelector(".language").appendChild(li)
+    }
+    addlanguage("ruby")
+    addlanguage("python")
+
+    function addoptimizedlanguage(langname){
+        const li = document.createElement('li')
+        li.appendChild(document.createTextNode(`${langname}`))  // optimized step
+        document.querySelector(".language").appendChild(li)
+    }
+    addoptimizedlanguage("java")
+
+
+    // edit value 
+
+    const secondlang = document.querySelector("li:nth-child(2)")
+    // secondlang.innerText = "c++"    //1st way
+    // secondlang.style.backgroundColor = "green"
+
+    const newli = document.createElement("li")
+    newli.textContent = "c++"   //2nd way
+    secondlang.replaceWith(newli)   // use replace with method  
+
+-->

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <title>Dom learning</title>
+    <style>
+        .bg-black{
+            background-color: black;
+            color: #fff;
+        }
+    </style>
+</head>
+<body class="bg-black">
+
+    <div >
+        <h1 id="title" class="heading"> dom learning by chai aur code</h1>
+        <h1> dom learning by rishi</h1>
+        <p>Lorem ipsum dolor sit amet consectetur</p>
+        <input type="password" name="password" id="">
+
+        <ul>
+            <li class= "listn" >1</li>
+            <li class= "listn">2</li>
+            <li class= "listn">3</li>
+            <li class= "listn">4</li>
+            <li class= "listn">5</li>
+         </ul>
+
+    </div>
+    
+</body>
+</html>
+
+
+<!-- to check the dom of browser go to console and write console.log(documnet)
+// we can make diagram of dom of this page and by that we can move to any attribute easily it help in this to move any node easily
+
+// by use of dom we can go to any element and manupliate thenm 
+// document.getElmentById("Id name") then we can manupliate them   -->
+
+
+<!-- selection menthod
+ 1. getElementById("id name").innerHTML = "new text"      // change the text
+ 2. getElementById("id name").style.color = "red"          // change the color
+3.  document.getElementById("title").getAttribute()       // to get the attribute
+4.  document.getElementById("title").setAttribute("class", "bg-black")   // to set the attribute it always overwrite the class name
+
+5. getElementById("title").removeAttribute("class")       // to remove the attribute
+6. getElementById("title").id                       // to get id
+6. getElementById("title").className                // to get class   remember we need to write className,
+7. getElementById("title").class                    //undefined
+
+8. const title = document.getElementById("title")
+title.style = "backgroundColor = green"
+'backgroundColor = green'
+title.style.backgroundColor = "green"
+'green'
+title.style.padding = "15px"
+'15px'
+title.style.padding = "30px"
+'30px'
+title.style.borderRadius = "15px"
+'15px'
+
+10. title.textContent                 // textcontent is used to get the text which is their are which is not display or not visible by property we can also get that text
+' dom learning by chai aur code'        
+title.innerHTML
+' dom learning by chai aur code'
+title.innerText                 // innerText is used to get the text which is their only not able to print display : none ad no visible text
+'dom learning by chai aur code'
+
+11. innerHTML    // give text with html tags
+12. document.querySelector('h1')     // it get the first h1 tag in this page
+13. document.querySelectorAll('h1')     // it get all h1 tag in this page
+
+14.document.querySelector('.className')        // it get the first class name in this page
+15.document.querySelectorAll('.className')        // it get all class name in this page
+
+16. document.querySelector('ul')
+<ul>​…​</ul>​<li>​…​</li>​<li>​…​</li>​<li>​…​</li>​<li>​…​</li>​<li>​…​</li>​</ul>​
+const myul = document.querySelector('ul')
+undefined
+myul
+<ul>​…​</ul>​<li>​…​</li>​<li>​…​</li>​<li>​…​</li>​<li>​…​</li>​<li>​…​</li>​</ul>​
+myul.querySelector('li')
+<li>​…​</li>​
+const gre = myul.querySelector('li')
+undefined
+gre.style.backgroundColor='green'
+'green'
+
+
+17. document.querySelectorAll('li')          // it will return you node list
+
+18. const list = document.querySelectorAll('li')
+undefined
+list[0]
+<li>item 1</li>
+list[1]
+<li>item 2</li>
+list[2]
+<li>item 3</li>
+list[3]
+<li>item 4</li>
+list[4]
+<li>item 5</li>
+
+19. list.forEach( (item) => {
+    item.style.backgroundColor = "green"
+} )
+
+20 list[0].style.color="yellow"   // for particular one 
+21  document.getElementsByClassName("listn")     // we get HTMLCollection(5) [li.listn, li.listn, li.listn, li.listn, li.listn]
+
+DO FOR IT we need to convert it to array then loop
+const temp = document.getElementsByClassName("listn") 
+const list = Array.from(temp)  // it convert HTMLCollection to array   now we can use loop which we want
+
+22. list.forEach( (item) => {
+    item.style.backgroundColor = "green"
+} )
+
+24. 
+-->

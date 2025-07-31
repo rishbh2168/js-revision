@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dom chai aur code</title>
+</head>
+<body  style="background-color: black; color: #fff;">
+    <div class="parent">
+        <div class="class">monday</div>
+        <div class="class">tuesday</div>
+        <div class="class">wednesday</div>
+        <div class="class">thursday</div>
+    </div>
+</body>
+<script>
+    const parent = document.querySelector(".parent")
+    // console.log(parent);
+    // console.log(parent.children)   // to access children
+    // console.log(parent.children[1].innerHTML)   // to access children inner html
+  
+    // for(let i = 0; i < parent.children.length; i++){
+    //     console.log(parent.children[i].innerHTML)
+    // }
+    parent.children[1].style.backgroundColor = "red"
+    parent.children[1].style.color = "black"
+
+    // console.log(parent.firstElementChild)          // we can  get firstchild
+    // console.log(parent.lastElementChild)           // we can  get lastchild
+    // console.log(parent.lastElementChild)
+    // console.log(parent.firstElementChild.nextElementSibling)  // first child next sibling
+    // console.log(parent.lastElementChild.previousElementSibling)  // last child previous sibling
+
+    // const dayone = document.querySelector(".class")  
+    // console.log(dayone)    // monday milega
+    // console.log(dayone.parentElement)          // parent milega
+
+    console.log("NODES: ", parent.childNodes)        // all child node milega
+
+
+// NODES:  
+// NodeList(9) [text, div.class, text, div.class, text, div.class, text, div.class, text]
+// 0
+// : 
+// text
+// 1
+// : 
+// div.class
+// 2
+// : 
+// text
+// 3
+// : 
+// div.class
+// 4
+// : 
+// text
+// 5
+// : 
+// div.class
+// 6
+// : 
+// text
+// 7
+// : 
+// div.class
+// 8
+// : 
+// text
+// length
+// : 
+// 9
+    console.log("ELEMENTS: ", parent.children)        // all child element milega
+
+
+
+</script>
+</html>
+
+
+
+<!-- dom/two.html 
+ 
+in this we talk about relation : parent and child, how we can add and remove child and all about it
+
+
+
+
+
+
+
+-->

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>chai aur code</title>
+</head>
+<body style="background-color: black; color: #fff;">
+    
+</body>
+<script>
+    const div = document.createElement("div")  // to create an new element
+    console.log(div)
+
+    div.className = "main"   // to set the class
+    div.id = Math.round(Math.random() * 10 + 1)       // to set the id
+    div.setAttribute("tile", "custom title")   // to set the attribute
+    div.style.backgroundColor = "red"
+    div.style.color = "black"
+    div.style.padding = "15px"
+    div.style.borderRadius = "15px"
+
+    div.innerText = "dom learning by chai aur code"   //text content
+    const text = document.createTextNode("text node")  //text node
+    div.appendChild(text)   // to append the child
+    document.body.appendChild(div)   // to append the custom element in body
+</script>
+</html>
+
+
+
+<!--   how to create an new element in dom
+
+Math.round(Math.random() * 10 + 1  TO GET RANDOM NUMBER
+ div.setAttribute("tile", "custom title")    1st is attribute name and 2nd is attribute value
+
+
+ div.innerText = "dom learning by chai aur code"   //text content
+    const text = document.createTextNode("dom learning by chai aur code")  //text node   more optimize than innerText
+
+    document.body.appendChild(div)   // to append the custom element in body
+-->
