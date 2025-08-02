@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>async</title>
+</head>
+<body>
+    <h1> chai aur code</h1>
+
+    <button id="stop">Stop</button>
+</body>
+<script>
+
+    // setTimeout(function(){          // after some time it will run 
+    //     console.log("first")}, 2000)   // time in milisecond
+
+    // setTimeout(function(){
+    //     console.log("second")}, 4000)
+
+    const sayhi = function(){
+        console.log("hi")
+    }
+
+    const changeMe = function(){
+        document.querySelector("h1").innerText = "Rishi"
+    }
+
+    const stopping = setTimeout(changeMe, 2000)   // function reference is passed and then it executed
+
+    // now we need to stop it so we use clear timeout
+
+    document.querySelector("#stop").addEventListener("click",function(){
+        clearTimeout(stopping)   // to stop timeout 
+        console.log("stopped")
+    })
+
+
+    // we have setInterval to print something after some interval
+    // to atop it we use clearInterval
+
+</script>
+</html>
